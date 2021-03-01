@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "azookubectl-45a0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "azookubectl-45a0"
+  template:
+    metadata:
+      labels:
+        app: "azookubectl-45a0"
+    spec:
+      containers:
+        - name: "azookubectl-45a0"
+          image: "3b297dc3c829432eb69b05d6db10959e.azurecr.io/azookubectl"
+          ports:
+          - containerPort: 80
